@@ -1,0 +1,15 @@
+input, select, textarea{
+  border-radius: 40px;
+  background-color: transparent;
+  border: 1px solid $main-color;
+  box-shadow: 0 2px 3px 0 rgba(16, 24, 40, 0.2);
+  @include font(1.6rem);
+  padding: 20px 26px;
+}
+.errorText{
+  color:$error-color;
+  @include font($size: 1.6rem, $weight: 500);
+}
+.errorField{
+  border-color: $error-color;
+}

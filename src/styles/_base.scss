@@ -1,0 +1,13 @@
+*{
+  @extend %font-primary;
+  color: $text-color-primary
+}
+body{
+  background-color: $background-color;
+}
+html{
+  font-size: 10px;
+}
+a{
+  text-decoration: none;
+}

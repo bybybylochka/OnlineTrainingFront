@@ -1,0 +1,12 @@
+.logo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  gap: 2rem;
+  &__text{
+    @include font($size:3.5rem, $weight:600);
+
+    color: $text-color-primary;
+  }
+}

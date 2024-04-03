@@ -1,0 +1,50 @@
+.footer{
+  background-color: $main-color;
+}
+
+.footer__wrapper{
+  display:flex;
+  @include columns(30%);
+  div {
+    flex-direction: column;
+  }
+}
+
+
+
+.footer__logo{
+  margin-top: 50px;
+  *{
+    color: $button-text-color;
+  }
+}
+
+.footer-navigation__title{
+  @include font(2.5rem);
+  @extend %font-add;
+  margin-bottom: 15px;
+  margin-top: 59px;
+  color:$button-text-color;
+}
+
+.footer-navigation__links{
+  padding-left: 0px;
+  li{
+    list-style-type: none;
+  }
+  a{
+    color:$button-text-color;
+    text-decoration: none;
+    &:hover{
+      color: $text-color-highlight-additional;
+    }
+    @include font($height: 3.6rem, $size:1.6rem, $weight:400);
+  }
+}
+.contacts{
+  display: flex;
+  gap:20px;
+  img{
+    width: 25px;
+  }
+}

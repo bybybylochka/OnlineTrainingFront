@@ -1,0 +1,54 @@
+.course-highlight{
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: $course-highlight-color;
+  box-shadow: 0 4px 35px 0 rgba(121, 102, 234, 0.08);
+}
+
+.course-highlight__wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.course-highlight__content{
+  padding: 20px;
+}
+.course-highlight__volume{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  &-icon{
+    height: 12px;
+    padding: 10px;
+    background: url("../../assets/highlightIcon.png") no-repeat;
+    background-position: center;
+  }
+  &-text{
+    @include font(1.6rem);
+  }
+}
+.course-highlight__name{
+  @extend %font-add;
+  @include font($size:2.2rem, $weight:700);
+}
+.course-highlight__category{
+  @include font(1.6rem);
+  color: $text-color-additional;
+}
+.course-highlight__bottom{
+  border-top: 1px solid $border-color;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  .button{
+    @include font(1.6rem)
+  }
+}
+.course-highlight__mentor{
+  display: flex;
+  align-items: center;
+  gap:20px;
+  &-name{
+    @include font(1.4rem);
+  }
+}
+

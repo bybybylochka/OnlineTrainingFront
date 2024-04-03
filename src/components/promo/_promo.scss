@@ -1,0 +1,47 @@
+.promo{
+  padding:30px 0;
+  overflow: hidden;
+  background-image: url("../../assets/promoBackground.png"),
+                    url("../../assets/promoBackground1.png"),
+                    url("../../assets/promoBackground2.png"),
+                    url("../../assets/promoBackground3.png");
+  background-position: center, top 10px right 50px, bottom 220px right 180px, center left 150px;
+  background-repeat: no-repeat;
+  background-size: 1280px, 220px, 125px, 80px;
+}
+
+.promo__wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.promo__title{
+  @include font($size: 6rem, $weight: 700);
+  color: $text-color-primary;
+  text-align: center;
+  width: 80%;
+  margin: 40px 0;
+  &, &>*{
+    @extend %font-add;
+  }
+  &>span{
+    color: $text-color-highlight-additional;
+  }
+  &>span:nth-child(2){
+    color: $text-color-highlight;
+  }
+}
+.promo__text{
+  @include font($size: 2.2rem);
+  color: $text-color-additional;
+  text-align: center;
+  margin: 10px 0 50px;
+}
+.promo__buttons{
+  display: flex;
+  gap:100px;
+}
+
+
