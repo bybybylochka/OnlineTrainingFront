@@ -55,7 +55,7 @@ const PartnerRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.password}</div>
             ) : null}
 
-            <input className={ formik.touched.password && formik.errors.password ? 'errorField': '' }
+            <input className={ formik.touched.name && formik.errors.name ? 'errorField': '' }
                    id="name"
                    name="name"
                    placeholder="Наименование"
@@ -64,11 +64,11 @@ const PartnerRegistrationForm = ({onSubmit}) => {
                    onBlur={formik.handleBlur}
                    value={formik.values.name}
             />
-            {formik.touched.password && formik.errors.password ? (
-                <div className={'errorText'}>{formik.errors.password}</div>
+            {formik.touched.name && formik.errors.name ? (
+                <div className={'errorText'}>{formik.errors.name}</div>
             ) : null}
 
-            <input className={ formik.touched.password && formik.errors.password ? 'errorField': '' }
+            <input className={ formik.touched.UNP && formik.errors.UNP ? 'errorField': '' }
                    id="UNP"
                    name="UNP"
                    placeholder="УНП"
@@ -77,8 +77,8 @@ const PartnerRegistrationForm = ({onSubmit}) => {
                    onBlur={formik.handleBlur}
                    value={formik.values.UNP}
             />
-            {formik.touched.password && formik.errors.password ? (
-                <div className={'errorText'}>{formik.errors.password}</div>
+            {formik.touched.UNP && formik.errors.UNP ? (
+                <div className={'errorText'}>{formik.errors.UNP}</div>
             ) : null}
 
             <div  className={'auth-form__buttons'}>

@@ -1,14 +1,11 @@
 import React from 'react';
-import {useNavigate} from 'react-router-dom';
+import {Navigate, useNavigate} from 'react-router-dom';
+import Navigation from "../components/navigation/Navigation";
 
 export const RestrictedRoute = ({children, isAuth}) => {
-    const navigate = useNavigate();
-    const presentPage = () => {
-        navigate(-1);
-    }
     return (
         <div>
-            {!isAuth ? <div>{children}</div> : presentPage()}
+            {!isAuth ? <div>{children}</div> : <Navigate to={'/'}/>}
         </div>
     );
 };

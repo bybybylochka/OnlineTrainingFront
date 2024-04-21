@@ -41,7 +41,6 @@ export const register = (role, data) => async (dispatch) => {
     let response = await authApi.register(role, data);
 }
 export const me = () => async (dispatch) => {
-    console.log('token');
     let token = localStorage.getItem('jwt');
     const validationRequest = {token}
     if (token) {

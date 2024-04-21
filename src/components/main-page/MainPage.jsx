@@ -1,9 +1,7 @@
 import React from 'react'
-import Header from "../header/Header";
 import Promo from "../promo/Promo";
 import PopularCourses from "../popular-courses/PopularCourses";
-import TopCategories from "../top-categories/TopCategories";
-import Footer from "../footer/Footer";
+import TopCategories from "../categories/top-categories/TopCategories";
 
 const MainPage = ( ) => {
     return (

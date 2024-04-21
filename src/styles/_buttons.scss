@@ -16,4 +16,12 @@
   &:hover{
     box-shadow: 0 5px 8px 0 rgba(16, 24, 40, 0.5);
   }
+  &:disabled{
+    background-color: $border-color;
+    color: grey;
+    cursor: auto;
+    &, &:hover{
+      box-shadow: none;
+    }
+  }
 }

@@ -55,7 +55,7 @@ const StudentRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.password}</div>
             ) : null}
 
-            <input className={ formik.touched.password && formik.errors.password ? 'errorField': '' }
+            <input className={ formik.touched.fullName && formik.errors.fullName ? 'errorField': '' }
                    id="fullName"
                    name="fullName"
                    placeholder="ФИО"
@@ -64,11 +64,11 @@ const StudentRegistrationForm = ({onSubmit}) => {
                    onBlur={formik.handleBlur}
                    value={formik.values.fullName}
             />
-            {formik.touched.password && formik.errors.password ? (
-                <div className={'errorText'}>{formik.errors.password}</div>
+            {formik.touched.fullName && formik.errors.fullName ? (
+                <div className={'errorText'}>{formik.errors.fullName}</div>
             ) : null}
 
-            <input className={ formik.touched.password && formik.errors.password ? 'errorField': '' }
+            <input className={ formik.touched.dateOfBirth && formik.errors.dateOfBirth ? 'errorField': '' }
                    id="dateOfBirth"
                    name="dateOfBirth"
                    placeholder="Дата рождения"
@@ -77,8 +77,8 @@ const StudentRegistrationForm = ({onSubmit}) => {
                    onBlur={formik.handleBlur}
                    value={formik.values.dateOfBirth}
             />
-            {formik.touched.password && formik.errors.password ? (
-                <div className={'errorText'}>{formik.errors.password}</div>
+            {formik.touched.dateOfBirth && formik.errors.dateOfBirth ? (
+                <div className={'errorText'}>{formik.errors.dateOfBirth}</div>
             ) : null}
 
             <div  className={'auth-form__buttons'}>

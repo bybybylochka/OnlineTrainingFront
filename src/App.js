@@ -11,14 +11,16 @@ import {PrivateStudentRoute} from "./routes/PrivateStudentRoute";
 import StudentAccount from "./components/student-account/StudentAccount";
 import Registration from "./components/auth/registration/Registration";
 import {RestrictedRoute} from "./routes/RestrictedRoute";
+import {PrivatePartnerRoute} from "./routes/PrivatePartnerRoute";
+import PartnerAccount from "./components/partner-account/PartnerAccount";
 
-function App() {
+const App = ()  => {
     const role = useSelector((state)=>state.auth.role);
     const isAuth = useSelector((state)=>state.auth.isAuth);
     const dispatch = useDispatch();
     useEffect(()=>{
         dispatch(me());
-    }, []);
+    });
     return (
       <BrowserRouter>
           <div>
@@ -31,6 +33,8 @@ function App() {
                          element={<RestrictedRoute isAuth={isAuth}><Registration/></RestrictedRoute>}/>
                   <Route path='/student-account'
                          element={<PrivateStudentRoute role={role} isAuth={isAuth}><StudentAccount/></PrivateStudentRoute>}/>
+                  <Route path='/partner-account/*'
+                         element={<PrivatePartnerRoute role={role} isAuth={isAuth}><PartnerAccount/></PrivatePartnerRoute>}/>
               </Routes>
               <Footer/>
           </div>

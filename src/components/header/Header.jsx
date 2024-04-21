@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Logo from "../logo/Logo";
 import Navigation from "../navigation/Navigation";
 import {NavLink} from "react-router-dom";
@@ -8,7 +8,13 @@ import {logout} from "../../reducers/authReducer";
 
 const Header = () => {
     const isAuth = useSelector((state)=>state.auth.isAuth);
-    console.log(isAuth);
+    const role = useSelector((state)=>state.auth.role);
+    const accountPath = {
+        'ROLE_STUDENT': '/student-account',
+        'ROLE_ENTREPRENEUR': '/partner-account/data',
+        'ROLE_MENTOR': '/mentor-account',
+        'ROLE_ADMIN': './admin-account'
+    }
     const dispatch = useDispatch();
     const onClick = () => {
         dispatch(logout());
@@ -24,7 +30,7 @@ const Header = () => {
                 </div>
                 {isAuth?
                     <div className={'header__buttons'}>
-                        <NavLink to={'/student-account'}><button className={'button button_colored'}>Личный кабинет</button></NavLink>
+                        <NavLink to={accountPath[role]}><button className={'button button_colored'}>Личный кабинет</button></NavLink>
                         <NavLink to={'/'}><button className={'button button_transparent'} onClick={onClick}>Выйти</button></NavLink>
                     </div>
                         :
