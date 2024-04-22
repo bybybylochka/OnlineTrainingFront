@@ -1,57 +1,78 @@
-.course-highlight{
+.course-highlight {
   border-radius: 30px;
   overflow: hidden;
   background-color: $course-highlight-color;
   box-shadow: 0 4px 35px 0 rgba(121, 102, 234, 0.08);
+
+  img {
+    max-width: 100%;
+  }
 }
 
-.course-highlight__wrapper{
+.course-highlight__wrapper {
   display: flex;
   flex-direction: column;
 }
-.course-highlight__content{
+
+.course-highlight__content {
   padding: 20px;
-  button{
+
+  button {
     margin: 15px 0;
   }
 }
-.course-highlight__volume{
+
+.course-highlight__volume {
   display: flex;
   gap: 20px;
   align-items: center;
-  &-icon{
+
+  &-icon {
     height: 12px;
     padding: 10px;
     background: url("../../assets/highlightIcon.png") no-repeat;
     background-position: center;
   }
-  &-text{
+
+  &-text {
     @include font(1.6rem);
   }
 }
-.course-highlight__name{
+
+.course-highlight__name {
   @extend %font-add;
-  @include font($size:2.2rem, $weight:700);
+  @include font($size: 2.2rem, $weight: 700);
 }
-.course-highlight__category{
+
+.course-highlight__category {
   @include font(1.6rem);
   color: $text-color-additional;
 }
-.course-highlight__bottom{
+
+.course-highlight__bottom {
   border-top: 1px solid $border-color;
   padding-top: 20px;
   display: flex;
   justify-content: space-between;
-  .button{
+
+  .button {
     @include font(1.6rem)
   }
 }
-.course-highlight__mentor{
+
+.course-highlight__mentor {
   display: flex;
   align-items: center;
-  gap:20px;
-  &-name{
+  gap: 20px;
+
+  &-name {
     @include font(1.4rem);
+  }
+
+  &-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
   }
 }
 

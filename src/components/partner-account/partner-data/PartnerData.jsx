@@ -13,7 +13,7 @@ const PartnerData = () => {
     }
     return (
         <div className={'partner-data'}>
-            <p className={'partner-account__title'}>
+            <p className={'account__title'}>
                 Данные партнера
             </p>
             <div className={'partner-data__content'}>

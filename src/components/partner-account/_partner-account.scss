@@ -1,7 +1,8 @@
-.partner-account{
+.account {
   padding: 30px;
 }
-.partner-account__wrapper{
+
+.account__wrapper {
   display: flex;
   border: 4px solid $main-color;
   border-radius: 35px;
@@ -11,12 +12,14 @@
   background-position: top 50px right 50px, right 100px bottom 140px, bottom 80px right 300px, top 100px right 250px;
   background-repeat: no-repeat;
 }
-.partner-account__workspace{
+
+.account__workspace {
   flex-basis: 80%;
   padding: 30px 40px 100px;
 }
-.partner-account__title{
-  @include font($size:3rem, $weight:600);
+
+.account__title {
+  @include font($size: 3rem, $weight: 600);
   @extend %font-add;
   color: $text-color-additional;
   margin: 20px;

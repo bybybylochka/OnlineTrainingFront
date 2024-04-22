@@ -7,7 +7,11 @@ const AccountNavigation = ({list}) => {
             <p className={'account-navigation__title'}>Меню</p>
             <ul className={'account-navigation__list'}>
                 {list.map((item, index) => (
-                    <NavLink to={item.path} key={index} className={'account-navigation__link'}>
+                    <NavLink to={item.path}
+                             key={index}
+                             className={({isActive}) => (isActive
+                                 ? "account-navigation__link account-navigation__link_active"
+                                 : "account-navigation__link")}>
                         {item.title}
                     </NavLink>
                 ))}

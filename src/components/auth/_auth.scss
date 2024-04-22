@@ -1,42 +1,48 @@
-.auth{
+.auth {
   padding: 50px 0 100px;
 }
-.auth__wrapper{
+
+.auth__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.auth__image{
+
+.auth__image {
   padding: 80px 100px;
   background-image: url("../../assets/fromBackground1.png"),
-                    url("../../assets/formBackground2.png"),
-                    url("../../assets/formBackground3.png"),
-                    url("../../assets/formBackground4.png");
+  url("../../assets/formBackground2.png"),
+  url("../../assets/formBackground3.png"),
+  url("../../assets/formBackground4.png");
   background-repeat: no-repeat;
   background-position: left top, right top, left bottom, right bottom;
 }
 
-.auth__form-container{
+.auth__form-container {
   display: flex;
   flex-direction: column;
 }
-.form-container__title{
-  @include font($size: 4rem, $weight:700);
+
+.form-container__title {
+  @include font($size: 4rem, $weight: 700);
   margin: 20px 0 40px;
   text-align: center;
   @extend %font-add
 }
-.auth-form{
+
+.auth-form {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: 30px;
-  &__buttons{
+
+  &__buttons {
     display: flex;
     justify-content: space-between;
   }
 }
-.auth__registration-buttons{
+
+.auth__registration-buttons {
   display: flex;
   margin: 0 auto 20px;
   gap: 40px;

@@ -1,5 +1,4 @@
 import React from 'react';
-import avatar from '../../../assets/avatar.png'
 
 const MentorHighlight = ({mentor, onClick}) => {
     return (

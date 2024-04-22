@@ -31,7 +31,8 @@
   display: flex;
   align-items: center;
   justify-items: center;
-  div{
+
+  div {
     color: $text-color-highlight;
     @include font(2.5rem);
     text-align: center;

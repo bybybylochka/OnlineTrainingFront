@@ -1,13 +1,6 @@
-import React, {useEffect, useRef} from 'react';
-import {useFormik} from 'formik';
-import {useDispatch, useSelector} from "react-redux";
-import {getMentorData, resetMentorData} from "../../../reducers/mentorReducer";
-import defaultImage from '../../../assets/avatar.png';
-import {resetCourseData} from "../../../reducers/courseReducer";
+import React from 'react';
 import arrow from "../../../assets/arrowToCourses.png";
-import useCourseForm from "../../../hooks/useCourseForm";
 import useMentorForm from "../../../hooks/useMentorForm";
-
 
 
 const MentorForm = ({onSubmit, mentorId, isAdding, setIsAdding, setIsEditing}) => {
@@ -20,22 +13,23 @@ const MentorForm = ({onSubmit, mentorId, isAdding, setIsAdding, setIsEditing}) =
     });
     return (
         <form onSubmit={formik.handleSubmit} className={'mentor-form'} encType={"multipart/form-data"}>
-            <button className={'button button_transparent'} onClick={onBack}><img src={arrow} alt={'arrow back'}/></button>
+            <button className={'button back button_transparent'} onClick={onBack}><img src={arrow} alt={'arrow back'}/>
+            </button>
             <div className={'mentor-form__image-block'}>
                 {!isAdding && formik.values.image && (
                     <img src={`data:image/jpeg;base64,${formik.values.image}`} alt={'avatar'}/>
                 )}
-                {isAdding && ( <input className={formik.touched.image && formik.errors.image ? 'errorField' : ''}
-                             ref={fileInputRef}
-                             id="image"
-                             name="image"
-                             placeholder="Фото"
-                             type="file"
-                             accept="image/*"
-                             onChange={formik.handleChange}
-                             onBlur={formik.handleBlur}
-                             value={formik.values.image}
-                    />)}
+                {isAdding && (<input className={formik.touched.image && formik.errors.image ? 'errorField' : ''}
+                                     ref={fileInputRef}
+                                     id="image"
+                                     name="image"
+                                     placeholder="Фото"
+                                     type="file"
+                                     accept="image/*"
+                                     onChange={formik.handleChange}
+                                     onBlur={formik.handleBlur}
+                                     value={formik.values.image}
+                />)}
                 {formik.touched.image && formik.errors.image ? (
                     <div className={'errorText'}>{formik.errors.image}</div>
                 ) : null}

@@ -1,24 +1,28 @@
-input, select, textarea{
+input, select, textarea {
   border-radius: 40px;
   background-color: transparent;
   border: 2px solid $main-color;
   box-shadow: 0 2px 3px 0 rgba(16, 24, 40, 0.2);
   @include font(1.6rem);
   padding: 20px 26px;
-  &:disabled{
+
+  &:disabled {
     color: $disabled-text-color;
     border-color: $text-color-additional;
   }
 }
-option{
+
+option {
   background-color: $main-color;
   color: $button-text-color;
 }
-.errorText{
-  color:$error-color;
+
+.errorText {
+  color: $error-color;
   @include font($size: 1.6rem, $weight: 500);
-position: relative;
+  position: relative;
 }
-.errorField{
+
+.errorField {
   border-color: $error-color;
 }

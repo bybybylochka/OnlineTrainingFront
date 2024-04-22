@@ -29,7 +29,7 @@ const StudentRegistrationForm = ({onSubmit}) => {
     });
     return (
         <form onSubmit={formik.handleSubmit} className={'auth-form'}>
-            <input className={ formik.touched.login && formik.errors.login ? 'errorField': '' }
+            <input className={formik.touched.login && formik.errors.login ? 'errorField' : ''}
                    id="login"
                    name="login"
                    placeholder="Логин"
@@ -42,7 +42,7 @@ const StudentRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.login}</div>
             ) : null}
 
-            <input className={ formik.touched.password && formik.errors.password ? 'errorField': '' }
+            <input className={formik.touched.password && formik.errors.password ? 'errorField' : ''}
                    id="password"
                    name="password"
                    placeholder="Пароль"
@@ -55,7 +55,7 @@ const StudentRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.password}</div>
             ) : null}
 
-            <input className={ formik.touched.fullName && formik.errors.fullName ? 'errorField': '' }
+            <input className={formik.touched.fullName && formik.errors.fullName ? 'errorField' : ''}
                    id="fullName"
                    name="fullName"
                    placeholder="ФИО"
@@ -68,7 +68,7 @@ const StudentRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.fullName}</div>
             ) : null}
 
-            <input className={ formik.touched.dateOfBirth && formik.errors.dateOfBirth ? 'errorField': '' }
+            <input className={formik.touched.dateOfBirth && formik.errors.dateOfBirth ? 'errorField' : ''}
                    id="dateOfBirth"
                    name="dateOfBirth"
                    placeholder="Дата рождения"
@@ -81,9 +81,11 @@ const StudentRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.dateOfBirth}</div>
             ) : null}
 
-            <div  className={'auth-form__buttons'}>
+            <div className={'auth-form__buttons'}>
                 <button className={'button button_colored'} type="submit">Создать аккаунт</button>
-                <NavLink to={"/login"}><button className={'button button_transparent'}>Уже есть аккаунт? Войдите</button></NavLink>
+                <NavLink to={"/login"}>
+                    <button className={'button button_transparent'}>Уже есть аккаунт? Войдите</button>
+                </NavLink>
             </div>
         </form>
     );

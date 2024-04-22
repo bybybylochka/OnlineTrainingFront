@@ -3,13 +3,13 @@ import Promo from "../promo/Promo";
 import PopularCourses from "../popular-courses/PopularCourses";
 import TopCategories from "../categories/top-categories/TopCategories";
 
-const MainPage = ( ) => {
+const MainPage = () => {
     return (
-            <main>
-                <Promo/>
-                <PopularCourses/>
-                <TopCategories/>
-            </main>
+        <main>
+            <Promo/>
+            <PopularCourses/>
+            <TopCategories/>
+        </main>
     )
 }
 

@@ -6,7 +6,6 @@
 @import 'styles/layout';
 @import 'styles/forms';
 
-
 @import 'components/modal/modal';
 @import 'components/header/header';
 @import 'components/logo/logo';
@@ -17,11 +16,20 @@
 @import 'components/categories/category-highlight/category-highlight';
 @import 'components/categories/top-categories/top-categories';
 @import 'components/footer/footer';
+
 @import 'components/auth/auth';
+
 @import 'components/account-navigation/account-navigation';
+
 @import 'components/partner-account/partner-courses/partner-course';
 @import 'components/partner-account/partner-data/partner-data';
 @import 'components/partner-account/partner-mentors/partner-mentors';
 @import 'components/partner-account/partner-account';
+
+@import 'components/mentor-account/mentor-courses/mentor-courses';
+@import 'components/mentor-account/mentor-data/mentor-data';
+@import 'components/mentor-account/mentor-account';
+
+
 
 

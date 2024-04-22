@@ -29,7 +29,7 @@ const PartnerRegistrationForm = ({onSubmit}) => {
     });
     return (
         <form onSubmit={formik.handleSubmit} className={'auth-form'}>
-            <input className={ formik.touched.login && formik.errors.login ? 'errorField': '' }
+            <input className={formik.touched.login && formik.errors.login ? 'errorField' : ''}
                    id="login"
                    name="login"
                    placeholder="Логин"
@@ -42,7 +42,7 @@ const PartnerRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.login}</div>
             ) : null}
 
-            <input className={ formik.touched.password && formik.errors.password ? 'errorField': '' }
+            <input className={formik.touched.password && formik.errors.password ? 'errorField' : ''}
                    id="password"
                    name="password"
                    placeholder="Пароль"
@@ -55,7 +55,7 @@ const PartnerRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.password}</div>
             ) : null}
 
-            <input className={ formik.touched.name && formik.errors.name ? 'errorField': '' }
+            <input className={formik.touched.name && formik.errors.name ? 'errorField' : ''}
                    id="name"
                    name="name"
                    placeholder="Наименование"
@@ -68,7 +68,7 @@ const PartnerRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.name}</div>
             ) : null}
 
-            <input className={ formik.touched.UNP && formik.errors.UNP ? 'errorField': '' }
+            <input className={formik.touched.UNP && formik.errors.UNP ? 'errorField' : ''}
                    id="UNP"
                    name="UNP"
                    placeholder="УНП"
@@ -81,9 +81,11 @@ const PartnerRegistrationForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.UNP}</div>
             ) : null}
 
-            <div  className={'auth-form__buttons'}>
+            <div className={'auth-form__buttons'}>
                 <button className={'button button_colored'} type="submit">Создать аккаунт</button>
-                <NavLink to={"/login"}><button className={'button button_transparent'}>Уже есть аккаунт? Войдите</button></NavLink>
+                <NavLink to={"/login"}>
+                    <button className={'button button_transparent'}>Уже есть аккаунт? Войдите</button>
+                </NavLink>
             </div>
         </form>
     );

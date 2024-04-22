@@ -2,7 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import CategoryHighlight from "../category-highlight/CategoryHighlight";
 import {categories} from '../categories-data';
-const TopCategories = () =>{
+
+const TopCategories = () => {
     var settings = {
         dots: true,
         infinite: true,
@@ -11,7 +12,7 @@ const TopCategories = () =>{
         slidesToScroll: 1,
         initialSlide: 0,
     };
-    return(
+    return (
         <div className={'top-categories'}>
             <div className={'top-categories__wrapper wrapper'}>
                 <p className={'top-categories__title'}>Исследуйте лучшие <span>категории</span></p>

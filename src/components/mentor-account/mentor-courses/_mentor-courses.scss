@@ -1,0 +1,115 @@
+.mentor-courses__adding-button {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  width: 350px;
+
+  img {
+    width: 35px;
+    margin-right: 10px;
+  }
+}
+
+.mentor-courses__courses {
+  @include columns(41%);
+  gap: 20px;
+}
+
+.mentor-courses__modules {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modules__title {
+  p {
+    @include font($size: 2.2rem, $weight: 600);
+    color: $text-color-additional
+  }
+
+  display: flex;
+  gap: 30px;
+}
+
+.modules {
+  display: flex;
+  justify-content: space-between;
+
+  * {
+    flex-basis: 30%;
+  }
+
+  & [class$="title"] {
+    @include font($size: 2rem, $weight: 600);
+  }
+
+  &__lessons-title {
+    color: $lessons-color;
+  }
+
+  &__tasks-title {
+    color: $tasks-color;
+  }
+
+  &__tests-title {
+    color: $tests-color;
+  }
+
+  & [class$="items"] {
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+  }
+
+  .button {
+    border-radius: 15px;
+    background-color: $background-color;
+  }
+}
+
+.module-highlight {
+  background-color: $background-color;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 5px 8px 0 rgba(16, 24, 40, 0.5);
+  padding: 10px 20px;
+
+  &__name {
+    @include font(1.6rem);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+  }
+
+  &__time {
+    @include font(1.4rem);
+    color: $disabled-text-color;
+  }
+
+  &__image {
+    width: 20px;
+  }
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: $border-color;
+  border-radius: 20px;
+  padding: 30px;
+
+  textarea {
+    width: 90%;
+  }
+
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

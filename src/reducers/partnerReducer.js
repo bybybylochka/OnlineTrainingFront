@@ -2,7 +2,7 @@ import {partnerApi} from "../api/api";
 
 const SET_PARTNER_DATA = 'SET_PARTNER_DATA';
 const SET_MENTORS = 'SET_MENTORS';
-const SET_COURSES = 'SET_COURSES';
+const SET_PARTNER_COURSES = 'SET_PARTNER_COURSES';
 
 let initialState = {
     name: '',
@@ -23,7 +23,7 @@ const partnerReducer = (state = initialState, action) => {
                 ...state,
                 ...action.payload
             }
-        case SET_COURSES:
+        case SET_PARTNER_COURSES:
             return {
                 ...state,
                 ...action.payload
@@ -33,8 +33,8 @@ const partnerReducer = (state = initialState, action) => {
     }
 }
 
-export const getPartnerData = () => async (dispatch) => {
-    const response = await partnerApi.getPartnerData();
+export const getPartner = () => async (dispatch) => {
+    const response = await partnerApi.getPartner();
     if (response) {
         dispatch(setPartnerData(response));
     }
@@ -55,9 +55,8 @@ export const getMentors = () => async (dispatch) => {
 }
 export const getCourses = () => async (dispatch) => {
     const response = await partnerApi.getCourses();
-    console.log(response.courses)
     if (response) {
-        dispatch(setCourses(response.courses))
+        dispatch(setPartnerCourses(response.courses))
     }
 }
 
@@ -74,9 +73,9 @@ export const setMentors = (data) => {
         payload: {mentors: data}
     }
 }
-export const setCourses = (data) => {
+export const setPartnerCourses = (data) => {
     return {
-        type: SET_COURSES,
+        type: SET_PARTNER_COURSES,
         payload: {courses: data}
     }
 }

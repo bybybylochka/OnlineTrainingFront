@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StudentAccount = ( ) => {
+const StudentAccount = () => {
     return (
         <div>аккаут пользователя</div>
     )

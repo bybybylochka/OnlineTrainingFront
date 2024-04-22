@@ -1,13 +1,15 @@
-.navigation{
+.navigation {
   @include font(1.8rem);
 }
-.navigation__link{
-  display:inline;
+
+.navigation__link {
+  display: inline;
   list-style: none;
   padding: 0 30px;
   cursor: pointer;
   color: $text-color-additional;
-  &:hover{
+
+  &:hover {
     color: $text-color-highlight;
   }
 }

@@ -1,43 +1,45 @@
-.course-form{
+.course-form {
   display: flex;
   flex-direction: column;
-  gap:30px;
-  input, select, button{
+  gap: 30px;
+
+  input, select, button {
     width: 40%;
   }
-  textarea{
+
+  textarea {
     width: 80%;
   }
-  &__image-block{
-    img{
+
+  &__image-block {
+    img {
       display: block;
       width: 45%;
       border-radius: 20px;
     }
   }
-  .button{
-    width: fit-content;
-    img{
-      transform: scaleX(-1);
-    }
-  }
+
 }
-.partner-courses__adding-button{
+
+.partner-courses__adding-button {
   display: flex;
   align-items: center;
   padding-left: 15px;
   width: 350px;
-  img{
+
+  img {
     width: 35px;
     margin-right: 10px;
   }
 }
-.partner-courses__content{
+
+.partner-courses__content {
   display: flex;
   flex-direction: column;
-  gap:30px;
+  gap: 30px;
 }
-.partner-courses__courses{
+
+.partner-courses__courses {
   @include columns(45%);
   gap: 30px;
 }

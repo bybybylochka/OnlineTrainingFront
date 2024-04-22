@@ -5,31 +5,14 @@ import PartnerCourses from "./partner-courses/PartnerCourses";
 import PartnerMentors from "./partner-mentors/PartnerMentors";
 import PartnerData from "./partner-data/PartnerData";
 import PartnerStatistics from "./partner-statistics/PartnerStatistics";
+import {partnerPaths} from "../utils/account-paths";
 
 const PartnerAccount = () => {
-    const list = [
-        {
-            path: '/partner-account/data',
-            title: 'Данные'
-        },
-        {
-            path: '/partner-account/courses',
-            title: 'Курсы'
-        },
-        {
-            path: '/partner-account/mentors',
-            title: 'Менторы'
-        },
-        {
-            path: '/partner-account/statistics',
-            title: 'Статистика'
-        }
-    ]
     return (
-        <div className={'partner-account'}>
-            <div className={'partner-account__wrapper wrapper'}>
-                <AccountNavigation list={list}/>
-                <div className={'partner-account__workspace'}>
+        <div className={'account'}>
+            <div className={'account__wrapper wrapper'}>
+                <AccountNavigation list={partnerPaths}/>
+                <div className={'account__workspace'}>
                     <Routes>
                         <Route path={'/data'} element={<PartnerData/>}/>
                         <Route path={'/courses'} element={<PartnerCourses/>}/>

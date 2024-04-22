@@ -42,7 +42,7 @@ export const categories = [
     {
         title: 'Игры',
         icon: gaming,
-        value:'GAMING',
+        value: 'GAMING',
         path: '/courses/gaming',
         color: '#6985f9'
     },
@@ -73,14 +73,14 @@ export const categories = [
         value: 'LANGUAGES',
         path: '/courses/languages',
         color: '#d04f45'
-    },{
+    }, {
 
         title: 'Финансы',
         icon: finance,
         value: 'FINANCE',
         path: '/courses/finance',
         color: '#15b063'
-    },{
+    }, {
         title: 'Другое',
         icon: other,
         value: 'OTHER',

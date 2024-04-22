@@ -1,5 +1,4 @@
 import React from "react";
-import {resetCourseData} from "../../../reducers/courseReducer";
 import {categories} from "../../categories/categories-data";
 import arrow from "../../../assets/arrowToCourses.png";
 import useCourseForm from "../../../hooks/useCourseForm";
@@ -15,7 +14,8 @@ const CourseForm = ({onSubmit, courseId, isAdding, setIsAdding, setIsEditing}) =
     });
     return (
         <form onSubmit={formik.handleSubmit} className={'course-form'} encType={"multipart/form-data"}>
-            <button className={'button button_transparent'} onClick={onBack}><img src={arrow} alt={'arrow back'}/></button>
+            <button className={'button back button_transparent'} onClick={onBack}><img src={arrow} alt={'arrow back'}/>
+            </button>
             <div className={'course-form__image-block'}>
                 {!isAdding && formik.values.image && (
                     <img src={`data:image/jpeg;base64,${formik.values.image}`} alt={'avatar'}/>

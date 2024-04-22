@@ -1,8 +1,6 @@
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useRef} from "react";
 import {useFormik} from "formik";
-import {getCourseData, resetCourseData} from "../reducers/courseReducer";
-import {getMentors} from "../reducers/partnerReducer";
 import {getMentorData, resetMentorData} from "../reducers/mentorReducer";
 
 const validate = values => {
@@ -61,7 +59,7 @@ const useMentorForm = ({onSubmit, mentorId, isAdding, setIsAdding, setIsEditing}
         },
         validate,
         onSubmit: values => {
-            if(isAdding) {
+            if (isAdding) {
                 values.image = fileInputRef.current.files[0]
             }
             onSubmit(values);

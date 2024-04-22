@@ -7,12 +7,12 @@ import {logout} from "../../reducers/authReducer";
 
 
 const Header = () => {
-    const isAuth = useSelector((state)=>state.auth.isAuth);
-    const role = useSelector((state)=>state.auth.role);
+    const isAuth = useSelector((state) => state.auth.isAuth);
+    const role = useSelector((state) => state.auth.role);
     const accountPath = {
         'ROLE_STUDENT': '/student-account',
         'ROLE_ENTREPRENEUR': '/partner-account/data',
-        'ROLE_MENTOR': '/mentor-account',
+        'ROLE_MENTOR': '/mentor-account/data',
         'ROLE_ADMIN': './admin-account'
     }
     const dispatch = useDispatch();
@@ -28,17 +28,25 @@ const Header = () => {
                 <div className={'header__navigation'}>
                     <Navigation/>
                 </div>
-                {isAuth?
+                {isAuth ?
                     <div className={'header__buttons'}>
-                        <NavLink to={accountPath[role]}><button className={'button button_colored'}>Личный кабинет</button></NavLink>
-                        <NavLink to={'/'}><button className={'button button_transparent'} onClick={onClick}>Выйти</button></NavLink>
+                        <NavLink to={accountPath[role]}>
+                            <button className={'button button_colored'}>Личный кабинет</button>
+                        </NavLink>
+                        <NavLink to={'/'}>
+                            <button className={'button button_transparent'} onClick={onClick}>Выйти</button>
+                        </NavLink>
                     </div>
-                        :
+                    :
                     <div className={'header__buttons'}>
-                     <NavLink to={'/login'}><button className={'button button_colored'}>Войти</button></NavLink>
-                     <NavLink to={'/register'}><button className={'button button_transparent'}>Зарегистрироваться</button></NavLink>
+                        <NavLink to={'/login'}>
+                            <button className={'button button_colored'}>Войти</button>
+                        </NavLink>
+                        <NavLink to={'/register'}>
+                            <button className={'button button_transparent'}>Зарегистрироваться</button>
+                        </NavLink>
                     </div>
-                    }
+                }
             </div>
         </header>
     )

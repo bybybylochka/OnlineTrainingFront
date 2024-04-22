@@ -10,11 +10,11 @@ const Registration = () => {
     const [role, setRole] = useState('student');
     const [isRegistered, setIsRegistered] = useState(false);
     const dispatch = useDispatch();
-    const onSubmit = (formData) =>{
+    const onSubmit = (formData) => {
         dispatch(register(role, formData));
         setIsRegistered(true)
     }
-    if(isRegistered) return <NavLink to={'/login'}/>
+    if (isRegistered) return <NavLink to={'/login'}/>
     return (
         <div className={'auth'}>
             <div className={'auth__wrapper wrapper'}>
@@ -22,10 +22,16 @@ const Registration = () => {
                 <div className={'auth__form-container'}>
                     <p className={'form-container__title'}>Зарегистрироваться как:</p>
                     <div className={'auth__registration-buttons'}>
-                        <button className={role==='student'?'button button_colored':'button button_transparent'} onClick={()=>setRole('student')}>Студент</button>
-                        <button className={role==='entrepreneur'?'button button_colored':'button button_transparent'} onClick={()=>setRole('entrepreneur')}>Партнер</button>
+                        <button className={role === 'student' ? 'button button_colored' : 'button button_transparent'}
+                                onClick={() => setRole('student')}>Студент
+                        </button>
+                        <button
+                            className={role === 'entrepreneur' ? 'button button_colored' : 'button button_transparent'}
+                            onClick={() => setRole('entrepreneur')}>Партнер
+                        </button>
                     </div>
-                    {role==='student'?<StudentRegistrationForm onSubmit={onSubmit}/>:<PartnerRegistrationForm onSubmit={onSubmit}/>}
+                    {role === 'student' ? <StudentRegistrationForm onSubmit={onSubmit}/> :
+                        <PartnerRegistrationForm onSubmit={onSubmit}/>}
                 </div>
             </div>
         </div>

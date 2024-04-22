@@ -1,12 +1,14 @@
-.header{
+.header {
   padding: 25px 0;
 
 }
-.header__wrapper{
+
+.header__wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .header__buttons {
   display: flex;
   gap: 20px;

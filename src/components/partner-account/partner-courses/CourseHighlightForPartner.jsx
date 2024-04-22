@@ -1,6 +1,4 @@
 import React from 'react';
-import course_image from "../../../assets/highlightImage.png";
-import avatar from "../../../assets/avatar.png";
 import {statusTypes} from "../../utils/status";
 import {categories} from "../../categories/categories-data";
 
@@ -8,7 +6,8 @@ const CourseHighlightForPartner = ({course, onClick, onDeactivate}) => {
     return (
         <div className={'course-highlight'} onClick={onClick}>
             <div className={'course-highlight__wrapper'}>
-                <img className={'course-highlight__image'} src={course_image} alt={'course highlight image'}/>
+                <img className={'course-highlight__image'} src={`data:image/jpeg;base64,${course.image}`}
+                     alt={'course highlight image'}/>
                 <div className={'course-highlight__content'}>
                     <p className={'course-highlight__name'}>
                         {course.name}
@@ -24,7 +23,8 @@ const CourseHighlightForPartner = ({course, onClick, onDeactivate}) => {
                     </button>
                     <div className={'course-highlight__bottom'}>
                         <div className={'course-highlight__mentor'}>
-                            <img className={'course-highlight__mentor-avatar'} src={avatar} alt={'avatar'}/>
+                            <img className={'course-highlight__mentor-avatar'}
+                                 src={`data:image/jpeg;base64,${course.mentor.image}`} alt={'avatar'}/>
                             <p className={'course-highlight__mentor-name'}>{course.mentor.fullName}</p>
                         </div>
                     </div>

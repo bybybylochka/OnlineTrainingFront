@@ -1,27 +1,40 @@
-.button{
+.button {
   border: none;
   border-radius: 47px;
   padding: 16px 28px;
   box-shadow: 0 2px 3px 0 rgba(16, 24, 40, 0.1);
   @include font(2rem);
   cursor: pointer;
+
   &_colored {
     background-color: $button-color;
     color: $button-text-color;
   }
-  &_transparent{
+
+  &_transparent {
     color: $text-color-additional;
     background-color: transparent;
   }
-  &:hover{
+
+  &:hover {
     box-shadow: 0 5px 8px 0 rgba(16, 24, 40, 0.5);
   }
-  &:disabled{
+
+  &:disabled {
     background-color: $border-color;
     color: grey;
     cursor: auto;
-    &, &:hover{
+
+    &, &:hover {
       box-shadow: none;
+    }
+  }
+
+  &.back {
+    width: fit-content;
+
+    img {
+      transform: scaleX(-1);
     }
   }
 }

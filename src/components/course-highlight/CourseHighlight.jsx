@@ -4,10 +4,10 @@ import avatar from '../../assets/avatar.png'
 import course_image from '../../assets/highlightImage.png'
 
 const CourseHighlight = () => {
-    return(
+    return (
         <div className={'course-highlight'}>
             <div className={'course-highlight__wrapper'}>
-                <img className={'course-highlight__image'} src={course_image} alt={'course highlight image'} />
+                <img className={'course-highlight__image'} src={course_image} alt={'course highlight image'}/>
                 <div className={'course-highlight__content'}>
                     <div className={'course-highlight__volume'}>
                         <img className={'course-highlight__volume-icon'} src={icon} alt={'play'}/>

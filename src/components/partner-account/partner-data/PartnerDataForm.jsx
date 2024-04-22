@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useFormik} from 'formik';
 import {useDispatch, useSelector} from "react-redux";
-import {getPartnerData} from "../../../reducers/partnerReducer";
+import {getPartner} from "../../../reducers/partnerReducer";
 
 const validate = values => {
     const errors = {};
@@ -20,7 +20,7 @@ const PartnerDataForm = ({onSubmit}) => {
     const UNP = useSelector((state) => state.partner.UNP);
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(getPartnerData());
+        dispatch(getPartner());
     }, [dispatch, name, UNP])
     const formik = useFormik({
         enableReinitialize: true,
@@ -35,7 +35,7 @@ const PartnerDataForm = ({onSubmit}) => {
     });
     return (
         <form onSubmit={formik.handleSubmit} className={'partner-data-form'}>
-            <input className={ formik.touched.login && formik.errors.login ? 'errorField': '' }
+            <input className={formik.touched.login && formik.errors.login ? 'errorField' : ''}
                    id="name"
                    name="name"
                    placeholder="Наименование"
@@ -48,7 +48,7 @@ const PartnerDataForm = ({onSubmit}) => {
                 <div className={'errorText'}>{formik.errors.name}</div>
             ) : null}
 
-            <input className={ formik.touched.UNP && formik.errors.UNP ? 'errorField': '' }
+            <input className={formik.touched.UNP && formik.errors.UNP ? 'errorField' : ''}
                    id="UNP"
                    name="UNP"
                    placeholder="УНП"
