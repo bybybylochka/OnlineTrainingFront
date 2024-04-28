@@ -35,7 +35,6 @@ export const login = (login, password) => async (dispatch) => {
 export const logout = () => async (dispatch) => {
     await authApi.logout();
     clearUserData(dispatch);
-    console.log(window.store.getState());
 }
 export const register = (role, data) => async (dispatch) => {
     let response = await authApi.register(role, data);

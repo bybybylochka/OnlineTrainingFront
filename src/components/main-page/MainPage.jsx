@@ -7,7 +7,7 @@ const MainPage = () => {
     return (
         <main>
             <Promo/>
-            <PopularCourses/>
+            {/*<PopularCourses/>*/}
             <TopCategories/>
         </main>
     )

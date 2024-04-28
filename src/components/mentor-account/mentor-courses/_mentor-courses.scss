@@ -10,7 +10,7 @@
   }
 }
 
-.mentor-courses__courses {
+.mentor-courses__courses, .mentor-checking__courses{
   @include columns(41%);
   gap: 20px;
 }

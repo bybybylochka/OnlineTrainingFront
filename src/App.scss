@@ -6,10 +6,13 @@
 @import 'styles/layout';
 @import 'styles/forms';
 
+
+
 @import 'components/modal/modal';
 @import 'components/header/header';
 @import 'components/logo/logo';
 @import 'components/navigation/navigation';
+@import 'components/courses/courses';
 @import 'components/promo/promo';
 @import 'components/course-highlight/course-highlight';
 @import 'components/popular-courses/popular-courses';
@@ -28,8 +31,16 @@
 
 @import 'components/mentor-account/mentor-courses/mentor-courses';
 @import 'components/mentor-account/mentor-data/mentor-data';
+@import 'components/mentor-account/mentor-checking/mentor-checking';
+@import 'components/mentor-account/mentor-rating/mentor-rating';
 @import 'components/mentor-account/mentor-account';
 
 
+@import 'components/student-account/student-account';
+
+@import 'components/admin-account/admin-courses/admin-courses';
+@import 'components/admin-account/admin-account';
+
+@import 'components/after-payment/after-payment';
 
 

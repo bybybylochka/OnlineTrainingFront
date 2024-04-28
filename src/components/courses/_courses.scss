@@ -1,0 +1,126 @@
+.courses__wrapper {
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: url('../../assets/promoBackground3.png'), url("../../assets/formBackground4.png"), url("../../assets/formBackground2.png");
+  background-repeat: no-repeat;
+  background-position: top 200px left 100px, top 20px left 300px, right 60px top 70px;
+}
+
+.courses__title {
+  @include font($size: 3.4rem, $weight: 600);
+  @extend %font-add;
+  color: $main-color;
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+  gap: 15px;
+
+  &__query {
+    display: flex;
+    gap: 20px;
+
+  }
+
+  &__options {
+    display: flex;
+    gap: 20px;
+  }
+}
+
+.courses__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  &_empty {
+    @include font(2.4rem);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+  }
+
+  padding: 30px 0;
+}
+
+.search-form__price-range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  input {
+    width: 60px;
+  }
+
+  span {
+    @include font(2.4rem);
+  }
+
+  label {
+    @include font(2rem);
+  }
+}
+
+.course__content {
+  display: flex;
+  padding: 30px 0;
+  gap: 30px;
+
+  .course__image {
+    width: 30%;
+    border-radius: 30px;
+    height: fit-content;
+  }
+  .course__info{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .course__name {
+    @include font($size: 3.6rem, $weight: 600);
+    color: $main-color;
+    @extend %font-add;
+    margin-top: 0;
+  }
+
+  .course__description {
+    @include font(2rem);
+
+  }
+
+  .course__price {
+    @include font($size: 2.8rem, $weight: 600);
+    color: $main-color;
+  }
+
+  .course__category {
+    @include font($size: 2.4rem, $weight: 600);
+
+  }
+
+  .mentor-highlight {
+    max-width: 100%;
+  }
+  .course__partner{
+    @include font(1.8rem);
+    color: $disabled-text-color;
+  }
+  .course__modules-title, .course__mentor-title{
+    @include font($size:2rem, $weight: 600);
+    color: $text-color-highlight-additional;
+    margin-top: 50px;
+  }
+  .button{
+    width: fit-content;
+    display: block;
+    margin-top: 50px;
+  }
+}

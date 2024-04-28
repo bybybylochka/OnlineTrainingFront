@@ -100,6 +100,11 @@ export const mentorApi = {
 }
 
 export const courseApi = {
+    getAllCourses() {
+        return instance.get(`/courses`)
+            .then(response => response.data)
+            .catch(() => alert('Ошибка getCourses'));
+    },
     getCourseData(courseId) {
         return instance.get(`/courses/${courseId}`)
             .then(response => response.data)
@@ -123,6 +128,11 @@ export const courseApi = {
         return instance.put(`/courses/status/${courseId}`, null, {params: {courseStatus: 'INACTIVE'}})
             .then(response => response.data)
             .catch(() => alert('Ошибка editMentorData'));
+    },
+    approveCourse(courseId) {
+        return instance.put(`/courses/status/${courseId}`, null, {params: {courseStatus: 'APPROVED'}})
+            .then(response => response.data)
+            .catch(() => alert('Ошибка approveCourse'));
     },
     sendCourse(courseId) {
         return instance.put(`/courses/status/${courseId}`, null, {params: {courseStatus: 'FILLED_IN'}})
@@ -148,6 +158,21 @@ export const courseApi = {
         return instance.get(`/tests/course/${courseId}`)
             .then(response => response.data)
             .catch(() => console.log('modules error'));
+    },
+    getAnswers(courseId) {
+        return instance.get(`/answers/course/${courseId}`)
+            .then(response => response.data)
+            .catch((error) => console.log(error));
+    },
+    checkAnswer(data) {
+        return instance.post(`/answers/check`, data)
+            .then(response => response.data)
+            .catch((error) => console.log(error));
+    },
+    purchaseCourse(courseId) {
+        return instance.post(`/purchased-courses`, {courseId})
+            .then(response => response.data)
+            .catch((error) => console.log(error));
     }
 }
 

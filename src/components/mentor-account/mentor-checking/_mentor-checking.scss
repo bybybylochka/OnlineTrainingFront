@@ -1,0 +1,44 @@
+.work{
+  background-color: $background-color;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 5px 8px 0 rgba(16, 24, 40, 0.5);
+  padding: 10px 20px;
+  width: 90%;
+  &_unchecked{
+    border: $main-color 2px solid;
+  }
+}
+.work__info{
+  display: flex;
+  justify-content: space-between;
+  .button{
+    height: fit-content;
+    img{
+      width: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+    .expanded {
+      transform: rotate(180deg);
+    }
+  }
+}
+.work__details{
+  p{
+    @include font(1.8rem);
+  }
+  span{
+    color: $text-color-highlight;
+    font-weight: 600;
+  }
+}
+.checking-form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+.mentor-checking__content{
+  padding: 30px 0;
+}

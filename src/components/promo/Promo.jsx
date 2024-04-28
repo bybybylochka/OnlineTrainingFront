@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from "react-router-dom";
 
 const Promo = () => {
     return (
@@ -13,8 +14,12 @@ const Promo = () => {
                     Присоединиться как:
                 </div>
                 <div className={'promo__buttons'}>
-                    <button className={'button button_colored'}>Студент</button>
-                    <button className={'button button_colored'}>Партнер</button>
+                    <NavLink to={'/register'}>
+                        <button className={'button button_colored'}>Студент</button>
+                    </NavLink>
+                    <NavLink to={'/register'}>
+                        <button className={'button button_colored'}>Партнер</button>
+                    </NavLink>
                 </div>
             </div>
         </div>

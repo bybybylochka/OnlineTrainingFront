@@ -1,0 +1,29 @@
+.after-payment__wrapper {
+
+  padding: 150px 200px;
+}
+
+.after-payment__content {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  gap: 50px;
+  border-radius: 30px;
+  border: $main-color 3px solid;
+  padding: 50px 20px;
+
+  .button {
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+.after-payment__text {
+  margin: auto;
+  @include font($size: 3rem);
+
+  span {
+    color: $text-color-highlight;
+    font-weight: 600;
+  }
+}

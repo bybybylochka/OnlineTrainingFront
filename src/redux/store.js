@@ -6,6 +6,8 @@ import courseReducer from "../reducers/courseReducer";
 import lessonReducer from "../reducers/lessonReducer";
 import taskReducer from "../reducers/taskReducer";
 import testReducer from "../reducers/testReducer";
+import adminReducer from "../reducers/adminReducer";
+import studentReducer from "../reducers/studentReducer";
 
 let store = configureStore({
     reducer: {
@@ -15,7 +17,9 @@ let store = configureStore({
         course: courseReducer,
         lesson: lessonReducer,
         task: taskReducer,
-        test: testReducer
+        test: testReducer,
+        admin: adminReducer,
+        student: studentReducer
     }
 })
 

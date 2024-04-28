@@ -13,6 +13,9 @@ import {RestrictedRoute} from "./routes/RestrictedRoute";
 import {PrivateRoute} from "./routes/PrivateRoute";
 import PartnerAccount from "./components/partner-account/PartnerAccount";
 import MentorAccount from "./components/mentor-account/MentorAccount";
+import Courses from "./components/courses/Courses";
+import AdminAccount from "./components/admin-account/AdminAccount";
+import AfterPayment from "./components/after-payment/AfterPayment";
 
 const App = () => {
     const role = useSelector((state) => state.auth.role);
@@ -38,7 +41,15 @@ const App = () => {
                            element={<PrivateRoute role={role} isAuth={isAuth}
                                                   rightRole={'ROLE_ENTREPRENEUR'}><PartnerAccount/></PrivateRoute>}/>
                     <Route path='/mentor-account/*'
-                           element={<PrivateRoute role={role} isAuth={isAuth} rightRole={'ROLE_MENTOR'}><MentorAccount/></PrivateRoute>}/>
+                           element={<PrivateRoute role={role} isAuth={isAuth}
+                                                  rightRole={'ROLE_MENTOR'}><MentorAccount/></PrivateRoute>}/>
+                    <Route path='/admin-account/*'
+                           element={<PrivateRoute role={role} isAuth={isAuth}
+                                                  rightRole={'ROLE_ADMIN'}><AdminAccount/></PrivateRoute>}/>
+
+                    <Route path='/courses'
+                           element={<Courses/>}/>
+                    <Route path={'/after-payment/:courseId'} element={<AfterPayment/>}/>
                 </Routes>
                 <Footer/>
             </div>
